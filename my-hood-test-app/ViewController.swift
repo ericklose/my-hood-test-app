@@ -19,6 +19,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let post = Post(imagePath: "", title: "Fake Post", postDesc: "This should be normal looking text")
+        let post2 = Post(imagePath: "", title: "Real Post", postDesc: "This should be normal looking text but super duper extra long forcing the shrinkage to take effect. It may need to be more long for the shrinkage to be more noticeable")
+        let post3 = Post(imagePath: "", title: "Totally Absolutely Legit Post", postDesc: "This should be normal looking text")
+
+        posts.append(post)
+        posts.append(post2)
+        posts.append(post3)
+        
+        tableView.reloadData()
+    
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -27,8 +38,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        let post = posts[indexPath.row]
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
-            
+            cell.configureCell(post)
+            return cell
+        } else {
+            let cell = PostCell()
+            cell.configureCell(post)
+            return cell
         }
             
     }

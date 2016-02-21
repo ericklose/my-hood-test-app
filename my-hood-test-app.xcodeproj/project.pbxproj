@@ -15,6 +15,7 @@
 		A62457EE1C790FE9003536E8 /* my_hood_test_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62457ED1C790FE9003536E8 /* my_hood_test_appTests.swift */; };
 		A62457FA1C791085003536E8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62457F91C791085003536E8 /* Post.swift */; };
 		A62457FF1C79189D003536E8 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62457FE1C79189D003536E8 /* PostCell.swift */; };
+		A62458021C7A2437003536E8 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62458011C7A2437003536E8 /* AddPostVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		A62457EF1C790FE9003536E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A62457F91C791085003536E8 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A62457FE1C79189D003536E8 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		A62458011C7A2437003536E8 /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +85,9 @@
 			children = (
 				A62457F81C791075003536E8 /* Model */,
 				A62457FB1C791832003536E8 /* View */,
+				A62458001C7A23FC003536E8 /* Controller */,
 				A62457D81C790FE9003536E8 /* AppDelegate.swift */,
-				A62457DA1C790FE9003536E8 /* ViewController.swift */,
-				A62457DC1C790FE9003536E8 /* Main.storyboard */,
 				A62457DF1C790FE9003536E8 /* Assets.xcassets */,
-				A62457E11C790FE9003536E8 /* LaunchScreen.storyboard */,
 				A62457E41C790FE9003536E8 /* Info.plist */,
 			);
 			path = "my-hood-test-app";
@@ -113,9 +113,20 @@
 		A62457FB1C791832003536E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A62457E11C790FE9003536E8 /* LaunchScreen.storyboard */,
+				A62457DC1C790FE9003536E8 /* Main.storyboard */,
 				A62457FE1C79189D003536E8 /* PostCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		A62458001C7A23FC003536E8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A62457DA1C790FE9003536E8 /* ViewController.swift */,
+				A62458011C7A2437003536E8 /* AddPostVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +234,7 @@
 			files = (
 				A62457FA1C791085003536E8 /* Post.swift in Sources */,
 				A62457DB1C790FE9003536E8 /* ViewController.swift in Sources */,
+				A62458021C7A2437003536E8 /* AddPostVC.swift in Sources */,
 				A62457D91C790FE9003536E8 /* AppDelegate.swift in Sources */,
 				A62457FF1C79189D003536E8 /* PostCell.swift in Sources */,
 			);
