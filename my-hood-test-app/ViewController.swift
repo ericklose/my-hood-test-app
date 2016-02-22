@@ -12,23 +12,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var posts = [Post]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-        let post = Post(imagePath: "", title: "Fake Post", postDesc: "This should be normal looking text")
-        let post2 = Post(imagePath: "", title: "Real Post", postDesc: "This should be normal looking text but super duper extra long forcing the shrinkage to take effect. It may need to be more long for the shrinkage to be more noticeable")
-        let post3 = Post(imagePath: "", title: "Totally Absolutely Legit Post", postDesc: "This should be normal looking text")
-
-        posts.append(post)
-        posts.append(post2)
-        posts.append(post3)
-        
-        tableView.reloadData()
+        DataService.instance.loadPosts()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "onPostsLoaded:", name: "postsLoaded", object: nil)
     
     }
 
@@ -38,7 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let post = posts[indexPath.row]
+        let post = DataService.instance.loadedPosts[indexPath.row]
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
             cell.configureCell(post)
             return cell
@@ -55,9 +45,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return DataService.instance.loadedPosts.count
     }
     
+    func onPostsLoaded(notif: AnyObject) {
+        tableView.reloadData()
+    }
     
 }
 

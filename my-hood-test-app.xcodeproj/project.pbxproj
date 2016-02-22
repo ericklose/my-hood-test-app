@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A623EFD11C7B5BE100C266FC /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623EFD01C7B5BE100C266FC /* DataService.swift */; };
 		A62457D91C790FE9003536E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62457D81C790FE9003536E8 /* AppDelegate.swift */; };
 		A62457DB1C790FE9003536E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62457DA1C790FE9003536E8 /* ViewController.swift */; };
 		A62457DE1C790FE9003536E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62457DC1C790FE9003536E8 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A623EFD01C7B5BE100C266FC /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A62457D51C790FE9003536E8 /* my-hood-test-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-hood-test-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62457D81C790FE9003536E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A62457DA1C790FE9003536E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A623EFCF1C7B5BCD00C266FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A623EFD01C7B5BE100C266FC /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		A62457CC1C790FE9003536E8 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 		A62457D71C790FE9003536E8 /* my-hood-test-app */ = {
 			isa = PBXGroup;
 			children = (
+				A623EFCF1C7B5BCD00C266FC /* Services */,
 				A62457F81C791075003536E8 /* Model */,
 				A62457FB1C791832003536E8 /* View */,
 				A62458001C7A23FC003536E8 /* Controller */,
@@ -235,6 +246,7 @@
 				A62457FA1C791085003536E8 /* Post.swift in Sources */,
 				A62457DB1C790FE9003536E8 /* ViewController.swift in Sources */,
 				A62458021C7A2437003536E8 /* AddPostVC.swift in Sources */,
+				A623EFD11C7B5BE100C266FC /* DataService.swift in Sources */,
 				A62457D91C790FE9003536E8 /* AppDelegate.swift in Sources */,
 				A62457FF1C79189D003536E8 /* PostCell.swift in Sources */,
 			);
@@ -426,6 +438,7 @@
 				A62457F41C790FE9003536E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A62457F51C790FE9003536E8 /* Build configuration list for PBXNativeTarget "my-hood-test-appTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +447,7 @@
 				A62457F71C790FE9003536E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
